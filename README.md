@@ -43,7 +43,14 @@ streamlit run app.py
 
 The application will open at the local Streamlit URL shown in the terminal.
 
-The included `runtime.txt` specifies Python 3.11 for hosted deployments.
+The project is currently aligned with the installed scikit-learn version used for model persistence. If the model file needs to be refreshed, run:
+
+```powershell
+cd streamlit-app
+python retrain_model.py
+```
+
+The included `runtime.txt` specifies Python 3.14 for hosted deployments, and the model is regenerated against the current scikit-learn runtime to avoid pickle-version mismatches.
 
 ## Run the notebook
 
